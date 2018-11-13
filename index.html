@@ -10,39 +10,41 @@
 </head>
 <body>
   <div class="container">
-    <header class="title animated slideInDown bg-secondary text-center p-5 text-white">
-      <h1 class="display-4" id="title"> Animate.css </h1>
+    <header class="animated slideInDown text-center bg-secondary text-white p-5">
+      <h1 id="anim-head" class="display-4">Animate.css</h1>
     </header>
-    <button id="animateBtn" class="btn btn-parimary"> Animate </button>
-    <div class="animated slideInLeft delay-1s section1 p-5 my-3">
-      <h1>Section 1</h1>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, rem. Aliquid quo nesciunt earum placeat quam, doloremque consequatur modi saepe. Numquam, quia. Quaerat, ducimus voluptatem nihil mollitia totam illum minima cupiditate, ab itaque doloremque officia. Similique, consequuntur nisi corrupti ullam.</p>
-    </div>
-    <div class="animated slideInLeft delay-2s section2 p-5 my-3">
-      <h1>Section 2</h1>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, rem. Aliquid quo nesciunt earum placeat quam, doloremque consequatur modi saepe. Numquam, quia. Quaerat, ducimus voluptatem nihil mollitia totam illum minima cupiditate, ab itaque doloremque officia. Similique, consequuntur nisi corrupti ullam.</p>
-    </div>
+    <button id="animateBtn" class="btn btn-primary m-3">Animate</button>
+    <section id="section1" class="animated slideInLeft p-5 my-3">
+      <h1>Section One</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, repellat minima suscipit sapiente dolore inventore debitis maxime distinctio eaque dolores culpa aut ab, ipsum delectus adipisci dolorum perferendis iure et maiores sint obcaecati laboriosam ut nobis. Deleniti suscipit, ea non.</p>
+    </section>
+
+    <section id="section2" class="animated slideInLeft p-5 my-3">
+      <h1>Section Two</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, repellat minima suscipit sapiente dolore inventore debitis maxime distinctio eaque dolores culpa aut ab, ipsum delectus adipisci dolorum perferendis iure et maiores sint obcaecati laboriosam ut nobis. Deleniti suscipit, ea non.</p>
+    </section>
   </div>
 </body>
 <style>
-  .section2{
-  animation-iteration-count: 2;
+  #section2{
+    animation-delay: 1s;
+    animation-iteration-count: 2;
   }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script>
   $(function(){
     $('#animateBtn').click(function(){
-      animate('#title', 'bounce');
-      return false:
-    });
+        animate('#anim-head', 'bounce');
+        return false;
+      });
 
-    function animate(element, animation){
-      $(element).addClass(' animated '+animation);
-      var wait = setTimeout(function(){
-        $(element).removeClass('animated'+animation);
-      }, 1000);
-    }
-  })
+      function animate(element, animation){
+        $(element).addClass('animated '+animation);
+        var wait = setTimeout(function(){
+          $(element).removeClass('animated '+animation);
+        }, 1000);
+      }
+    })
 </script>
 </html>
