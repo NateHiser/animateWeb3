@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animate.css</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="title animated slideInDown bg-secondary text-center p-5 text-white">
+      <h1 class="display-4" id="title"> Animate.css </h1>
+    </header>
+    <button id="animateBtn" class="btn btn-parimary"> Animate </button>
+    <div class="animated slideInLeft delay-1s section1 p-5 my-3">
+      <h1>Section 1</h1>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, rem. Aliquid quo nesciunt earum placeat quam, doloremque consequatur modi saepe. Numquam, quia. Quaerat, ducimus voluptatem nihil mollitia totam illum minima cupiditate, ab itaque doloremque officia. Similique, consequuntur nisi corrupti ullam.</p>
+    </div>
+    <div class="animated slideInLeft delay-2s section2 p-5 my-3">
+      <h1>Section 2</h1>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, rem. Aliquid quo nesciunt earum placeat quam, doloremque consequatur modi saepe. Numquam, quia. Quaerat, ducimus voluptatem nihil mollitia totam illum minima cupiditate, ab itaque doloremque officia. Similique, consequuntur nisi corrupti ullam.</p>
+    </div>
+  </div>
+</body>
+<style>
+  .section2{
+  animation-iteration-count: 2;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script>
+  $(function(){
+    $('#animateBtn').click(function(){
+      animate('#title', 'bounce');
+      return false:
+    });
+
+    function animate(element, animation){
+      $(element).addClass(' animated '+animation);
+      var wait = setTimeout(function(){
+        $(element).removeClass('animated'+animation);
+      }, 1000);
+    }
+  })
+</script>
+</html>
