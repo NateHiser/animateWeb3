@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Zoom Out<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,25 +14,84 @@
       <h1 id="anim-head" class="display-4">Animate.css</h1>
     </header>
     <button id="animateBtn" class="btn btn-primary m-3">Animate</button>
-    <select id="animations" onchange="getSelectValue();">
+    <select id="animations">
       <option value="bounce">Bounce</option>
       <option value="flash">Flash</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
-      <option value="">JS</option>
+      <option value="pulse">Pulse</option>
+      <option value="rubberBand">Rubber Band</option>
+      <option value="shake">Shake</option>
+      <option value="headShake">HeadShake</option>
+      <option value="swing">Swing</option>
+      <option value="tada">Tada</option>
+      <option value="wobble">Wobble</option>
+      <option value="jello">Jello</option>
+      <option value="bounceIn">Bounce In</option>
+      <option value="bounceInLeft">Bounce In Left</option>
+      <option value="bounceInRight">Bounce In Right</option>
+      <option value="bounceInUp">Bounce In Up</option>
+      <option value="bounceInDown">Bounce In Down</option>
+      <option value="bounceOut">Bounce Out</option>
+      <option value="bounceOutRight">Bounce Out Right</option>
+      <option value="bounceOutLeft">Bounce Out Left</option>
+      <option value="bounceOutUp">Bounce Out Up</option>
+      <option value="bounceOutDown">Bounce Out Down</option>
+      <option value="fadeIn">Fade In</option>
+      <option value="fadeInRight">Fade In Right</option>
+      <option value="fadeInRightBig">Fade In Right Big</option>
+      <option value="fadeInLeft">Fade In Left</option>
+      <option value="fadeInLeftBig">Fade In Left Big</option>
+      <option value="fadeInUp">Fade In Up</option>
+      <option value="fadeInUpBig">Fade In Up Big</option>
+      <option value="fadeInDown">Fade In</option>
+      <option value="fadeInDownBig">Fade In</option>
+      <option value="fadeOut">Fade Out</option>
+      <option value="fadeOutRight">Fade Out Right</option>
+      <option value="fadeOutRightBig">Fade Out Right Big</option>
+      <option value="fadeOutLeft">Fade Out Left</option>
+      <option value="fadeOutLeftBig">Fade Out Left Big</option>
+      <option value="fadeOutUp">Fade Out Up</option>
+      <option value="fadeOutUpBig">Fade Out Up Big</option>
+      <option value="fadeOutDown">Fade Out</option>
+      <option value="fadeOutDownBig">Fade Out</option>
+      <option value="flipInX">Flip In X</option>
+      <option value="flipInY">Flip In Y</option>
+      <option value="flipOutX">Flip Out X</option>
+      <option value="flipOutY">flipOutY</option>
+      <option value="lightSpeedIn">Light Speed In</option>
+      <option value="lightSpeedOut">Light Speed Out</option>
+      <option value="rotateIn">Rotate In</option>
+      <option value="rotateInDownLeft">Rotate In Down Left</option>
+      <option value="rotateInDownRight">Rotate In Down Right</option>
+      <option value="rotateInUpLeft">Rotate In Up Left</option>
+      <option value="rotateInUpRight">Rotate In Up Right</option>
+      <option value="rotateOut">Rotate Out</option>
+      <option value="rotateOutDownLeft">Rotate Out Down Left</option>
+      <option value="rotateOutDownRight">Rotate Out Down Right</option>
+      <option value="rotateOutUpLeft">Rotate Out Up Left</option>
+      <option value="rotateOutUpRight">Rotate Out Up Right</option>
+      <option value="hinge">Hinge</option>
+      <option value="jackInTheBox">Jack In The Box</option>
+      <option value="rollIn">Roll In</option>
+      <option value="rollOut">Roll Out</option>
+      <option value="zoomIn">Zoom Out</option>
+      <option value="zoomInRight">Zoom Out Right</option>
+      <option value="zoomInLeft">Zoom Out Left</option>
+      <option value="zoomInUp">Zoom Out Up</option>
+      <option value="zoomInDown">Zoom Out Down</option>
+      <option value="zoomOut">Zoom Out</option>
+      <option value="zoomOutRight">Zoom Out Right</option>
+      <option value="zoomOutLeft">Zoom Out Left</option>
+      <option value="zoomOutUp">Zoom Out Up</option>
+      <option value="zoomOutDown">Zoom Out Down</option>
+      <option value="slideInRight">Slide In Right</option>
+      <option value="slideInLeft">Slide In Left</option>
+      <option value="slideInUp">Slide In Up</option>
+      <option value="slideInDown">Slide In Down</option>
+      <option value="slideOutRight">slide Out Right</option>
+      <option value="slideOutLeft">slide Out Left</option>
+      <option value="slideOutUp">slide Out Up</option>
+      <option value="slideOutDown">slide Out Down</option>
+      <option value="heartBeat">Heart Beat</option>
     </select>
     <section id="section1" class="animated slideInLeft p-5 my-3">
       <h1>Section One</h1>
@@ -54,16 +113,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script>
 
-    function getSelectValue() {
 
 
-      }
-
-      getSelectValue();
-
-  var selectedValue = document.getElementById("animations").value;
   $(function(){
     $('#animateBtn').click(function(){
+      var selectedValue = document.getElementById("animations").value;
         animate('#anim-head', selectedValue );
         return false;
         console.log(selectedValue);
