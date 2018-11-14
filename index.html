@@ -14,6 +14,26 @@
       <h1 id="anim-head" class="display-4">Animate.css</h1>
     </header>
     <button id="animateBtn" class="btn btn-primary m-3">Animate</button>
+    <select id="animations" onchange="getSelectValue();">
+      <option value="bounce">Bounce</option>
+      <option value="flash">Flash</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+      <option value="">JS</option>
+    </select>
     <section id="section1" class="animated slideInLeft p-5 my-3">
       <h1>Section One</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, repellat minima suscipit sapiente dolore inventore debitis maxime distinctio eaque dolores culpa aut ab, ipsum delectus adipisci dolorum perferendis iure et maiores sint obcaecati laboriosam ut nobis. Deleniti suscipit, ea non.</p>
@@ -33,10 +53,20 @@
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script>
+
+    function getSelectValue() {
+
+
+      }
+
+      getSelectValue();
+
+  var selectedValue = document.getElementById("animations").value;
   $(function(){
     $('#animateBtn').click(function(){
-        animate('#anim-head', 'bounce');
+        animate('#anim-head', selectedValue );
         return false;
+        console.log(selectedValue);
       });
 
       function animate(element, animation){
